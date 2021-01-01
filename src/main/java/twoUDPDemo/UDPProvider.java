@@ -1,10 +1,12 @@
+package twoUDPDemo;
+
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 
 public class UDPProvider {
     public static void main(String[] args) throws IOException {
-        System.out.println("UDPProvider start...");
+        System.out.println("twoUDPDemo.UDPProvider start...");
 
         //构建一个UDPSocket类,并且指定监听20000端口
         DatagramSocket datagramSocket = new DatagramSocket(20000);
@@ -29,7 +31,7 @@ public class UDPProvider {
         //输出接收到的数据
         System.out.println("IP:" + ip + "/t PORT:" + port + "/t Length:" + dataLen + "/t DaATA:" + receiveData);
 
-        System.out.println("UDPProvider receive message!");
+        System.out.println("twoUDPDemo.UDPProvider receive message!");
 
         //构建回送数据回送回去
         String str = "收到的消息和长度：" + dataLen;
@@ -43,7 +45,7 @@ public class UDPProvider {
         //发送消息
         datagramSocket.send(sendDatagramPacket);
 
-        System.out.println("UDPProvider send message!");
+        System.out.println("twoUDPDemo.UDPProvider send message!");
 
         //释放资源
         datagramSocket.close();

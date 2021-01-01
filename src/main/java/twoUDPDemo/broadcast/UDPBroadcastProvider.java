@@ -1,3 +1,6 @@
+package twoUDPDemo.broadcast;
+
+
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -35,7 +38,7 @@ public class UDPBroadcastProvider {
         @Override
         public void run() {
             super.run();
-            System.out.println("UDPBroadcastProvider start....");
+            System.out.println("twoUDPDemo.broadcast.UDPBroadcastProvider start....");
             //让其一直处于监听状态
             while (flag){
                 try {
@@ -71,7 +74,7 @@ public class UDPBroadcastProvider {
                 }finally {
                     close();
                 }
-                System.out.println("UDPBroadcastProvider finish...");
+                System.out.println("twoUDPDemo.broadcast.UDPBroadcastProvider finish...");
             }
         }
 

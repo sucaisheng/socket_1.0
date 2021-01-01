@@ -1,3 +1,5 @@
+package twoUDPDemo;
+
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -8,7 +10,7 @@ import java.net.InetAddress;
  */
 public class UDPSearcher {
     public static void main(String[] args) throws IOException {
-        System.out.println("UDPSearcher start...");
+        System.out.println("twoUDPDemo.UDPSearcher start...");
 
         //构建一个UDPSocket类用于发送数据,端口由系统分配
         DatagramSocket datagramSocket = new DatagramSocket();
@@ -25,7 +27,7 @@ public class UDPSearcher {
         //发送数据
         datagramSocket.send(datagramPacket);
 
-        System.out.println("UDPSearcher send message!");
+        System.out.println("twoUDPDemo.UDPSearcher send message!");
 
         //定义一个512大小 的字节数组用于接收发送的数据
         final byte[] receiveBytes = new byte[512];
@@ -47,7 +49,7 @@ public class UDPSearcher {
         //输出接收到的数据
         System.out.println("IP:" + ip + "/t PORT:" + port + "/t Length:" + dataLen + "/t DaATA:" + receiveData);
 
-        System.out.println("UDPSearcher receive mesage!");
+        System.out.println("twoUDPDemo.UDPSearcher receive mesage!");
 
         //释放资源
         datagramSocket.close();

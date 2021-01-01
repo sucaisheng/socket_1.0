@@ -1,3 +1,6 @@
+package twoUDPDemo.broadcast;
+
+
 import java.io.IOException;
 import java.net.*;
 import java.util.ArrayList;
@@ -7,7 +10,7 @@ import java.util.concurrent.CountDownLatch;
 public class UDPBroadcastSearch {
     private static final int LISTEN_PORT = 30000;
     public static void main(String[] args) throws IOException {
-        System.out.println("UDPBroadcastSearch start....");
+        System.out.println("twoUDPDemo.broadcast.UDPBroadcastSearch start....");
         Listener listener = listener();
         sendBroadcast();
 
@@ -18,7 +21,7 @@ public class UDPBroadcastSearch {
             System.out.println("Device:" + device.toString());
         }
 
-        System.out.println("UDPBroadcastSearch finish!");
+        System.out.println("twoUDPDemo.broadcast.UDPBroadcastSearch finish!");
     }
 
     /**
@@ -26,7 +29,7 @@ public class UDPBroadcastSearch {
      * @return
      */
     private static Listener listener(){
-        System.out.println("UDPBroadcastSearch start listen....");
+        System.out.println("twoUDPDemo.broadcast.UDPBroadcastSearch start listen....");
         CountDownLatch countDownLatch = new CountDownLatch(1);
         Listener listener = new Listener(LISTEN_PORT, countDownLatch);
         listener.start();
@@ -99,7 +102,7 @@ public class UDPBroadcastSearch {
 
             while (flag){
 
-                System.out.println("UDPBroadcastSearch start....");
+                System.out.println("twoUDPDemo.broadcast.UDPBroadcastSearch start....");
 
                 try {
                     //创建一个DatagramSocket用于监听LISTEN_PORT端口的数据
@@ -131,7 +134,7 @@ public class UDPBroadcastSearch {
                     close();
                 }
 
-                System.out.println("UDPBroadcastSearch listener finish!");
+                System.out.println("twoUDPDemo.broadcast.UDPBroadcastSearch listener finish!");
             }
         }
 

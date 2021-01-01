@@ -1,3 +1,5 @@
+package twoUDPDemo.broadcast;
+
 /**
  * 定义消息格式的类
  */
